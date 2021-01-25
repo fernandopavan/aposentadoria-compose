@@ -1,0 +1,57 @@
+version: "3.0"
+services:
+  db:
+    container_name: aposentadoria-banco
+    image: postgres:latest
+    volumes:
+      - db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_USER=aposentadoria_owner
+      - POSTGRES_DB=aposentadoria
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
+
+  activemq:
+    container_name: aposentadoria-rabbitmq
+    image: rabbitmq:3-management
+    ports:
+      - 5672:5672 # broker
+      - 15672:15672   # web
+
+  gateway:
+    container_name: aposentadoria-gateway-api
+    image: fernandopavan/aposentadoria-gateway-api:0.1
+    ports:
+      - 8080:8080
+
+  beneficiario:
+    container_name: aposentadoria-beneficiario-api
+    image: fernandopavan/aposentadoria-beneficiario-api:0.1
+    ports:
+      - 8081:8081
+    depends_on:
+      - db
+      - activemq
+
+  caixa:
+    container_name: aposentadoria-caixa-api
+    image: fernandopavan/aposentadoria-caixa-api:0.1
+    ports:
+      - 8082:8082
+    depends_on:
+      - db
+      - beneficiario
+      - activemq
+
+  front:
+    container_name: aposentadoria-front
+    image: fernandopavan/aposentadoria-front:0.1
+    ports:
+      - 9000:80
+    depends_on:
+      - gateway
+
+volumes:
+  db: {}
