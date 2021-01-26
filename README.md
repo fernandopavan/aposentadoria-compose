@@ -1,4 +1,4 @@
-# Projeto de cálculo de score
+# Projeto de cálculo de aposentadoria
 
 Aplicação para realizar cálculo de aposentadoria para beneficiários. 
 <br>
