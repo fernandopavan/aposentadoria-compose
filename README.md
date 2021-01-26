@@ -22,11 +22,10 @@ Aplicação para realizar cálculo de aposentadoria para beneficiários.
 - Maven 
 - Angular 8 - TypeScript
 - API Swagger 
-<br>
     http://localhost:8080/api/beneficiario/swagger-ui.html <br>
-    http://localhost:8080/api/caixa-eletronico/swagger-ui.html     <br>
+    http://localhost:8080/api/caixa-eletronico/swagger-ui.html <br>
     https://aposentadoria-gateway.herokuapp.com/api/caixa-eletronico/swagger-ui.html <br>
-    https://aposentadoria-gateway.herokuapp.com/api/beneficiario/swagger-ui.html
+    https://aposentadoria-gateway.herokuapp.com/api/beneficiario/swagger-ui.html  <br>
 - QueryDSL 
 - Websocket
 - JPA - Hibernate
@@ -63,11 +62,10 @@ Aplicação para realizar cálculo de aposentadoria para beneficiários.
 ##### Para rodar o back-end:
 
 - Clone os repositórios abaixo:
-<br>
     https://github.com/fernandopavan/aposentadoria-commons <br>
     https://github.com/fernandopavan/aposentadoria-gateway-api  <br>
     https://github.com/fernandopavan/aposentadoria-caixa-api <br>
-    https://github.com/fernandopavan/aposentadoria-beneficiario-api
+    https://github.com/fernandopavan/aposentadoria-beneficiario-api <br>
 
 - Execute o seguinte comando em cada raiz dos repositórios clonados: `mvn install`.
 
