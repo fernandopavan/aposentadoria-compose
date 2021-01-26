@@ -13,7 +13,7 @@ services:
     ports:
       - 5432:5432
 
-  activemq:
+  rabbitmq:
     container_name: aposentadoria-rabbitmq
     image: rabbitmq:3-management
     ports:
@@ -33,7 +33,7 @@ services:
       - 8081:8081
     depends_on:
       - db
-      - activemq
+      - rabbitmq
 
   caixa:
     container_name: aposentadoria-caixa-api
@@ -43,7 +43,7 @@ services:
     depends_on:
       - db
       - beneficiario
-      - activemq
+      - rabbitmq
 
   front:
     container_name: aposentadoria-front
