@@ -43,8 +43,7 @@ Aplicação para realizar cálculo de aposentadoria para beneficiários.
 - <b>Obs.:</b> é necessário ter o docker (~19.03.8) instalado no seu computador.
 
 - Para usar, no navegador, digite a seguinte URL: http://localhost:9000
-<br>
-    <b> Login: </b> `email: maria@gmail.com` | `senha: 123`
+<br><b> Login: </b> `email: maria@gmail.com` | `senha: 123`
     
 - Para ver o gerenciador do RabbitMQ, no navegador, digite a seguinte URL: http://localhost:15672
 
@@ -84,8 +83,7 @@ Descomentar também a parte comentada na classe `CalculoAMQPConfig.java`. Fazer 
 
 
 - Para usar, no navegador, digite a seguinte URL: http://localhost:9000 
-<br>
-    <b> Login: </b> `email: maria@gmail.com` | `senha: 123`
+<br><b> Login: </b> `email: maria@gmail.com` | `senha: 123`
 
 - Para ver o gerenciador do RabbitMQ quando executado local, no navegador, digite a seguinte URL: http://localhost:15672
 
